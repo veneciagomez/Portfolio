@@ -5,50 +5,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Venecia Gomez - Portfolio</title>
     <style>
-        body {
-            font-family: 'Ariel', sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        .section {
-            width: 100%;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: white;
-        }
+       /* Make text responsive */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px; /* Adds spacing */
+    box-sizing: border-box; /* Ensures padding doesn’t overflow */
+}
+
+/* Responsive text size */
+h1 {
+    font-size: 3rem; /* Adjusts on smaller screens */
+    max-width: 90%;
+    word-wrap: break-word; /* Prevents text from cutting off */
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+p {
+    font-size: 1.2rem;
+    max-width: 90%;
+    word-wrap: break-word;
+}
+
+/* Mobile adjustments */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .typing-container {
+        font-size: 1.5rem; /* Adjusts the typing text size */
         .intro {
-            background-color: #87CEFA;
-        }
-        .about {
-            background-color: #DB7093;
-        }
-        .portfolio {
-            background-color: #FFDAB9;
-        }
-        .resume {
-            background-color: #D8BFD8;
-        }
-        .contact {
-            background-color: #708090;
-        }
-        h1, h2 {
-            margin: 0;
-            padding-bottom: 20px;
-        }
-        .typing-container {
-            font-size: 30px;
-            font-weight: bold;
-            display: inline-block;
-            border-right: 3px solid white;
-            white-space: nowrap;
-            overflow: hidden;
-        }
-        p {
-            font-size: 22px; /* Increased paragraph text size */
+    background-color: #87CEFA;
+}
+.about {
+    background-color: #DB7093;
+}
+.portfolio {
+    background-color: #FFDAB9;
+}
+.resume {
+    background-color: #D8BFD8;
+}
+.contact {
+    background-color: #708090;
+}
+
+    }
+}
+ 
+    
         }
     </style>
     <script>

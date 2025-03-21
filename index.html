@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venecia Gomez - Portfolio</title>
+    <style>
+        body {
+            font-family: 'Ariel', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .section {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+        .intro {
+            background-color: #87CEFA;
+        }
+        .about {
+            background-color: #DB7093;
+        }
+        .portfolio {
+            background-color: #FFDAB9;
+        }
+        .resume {
+            background-color: #D8BFD8;
+        }
+        .contact {
+            background-color: #708090;
+        }
+        h1, h2 {
+            margin: 0;
+            padding-bottom: 20px;
+        }
+        .typing-container {
+            font-size: 30px;
+            font-weight: bold;
+            display: inline-block;
+            border-right: 3px solid white;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        p {
+            font-size: 22px; /* Increased paragraph text size */
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const textElement = document.querySelector(".typing-text");
+            const texts = ["Data Analyst", "Business Intelligence Professional"];
+            let index = 0;
+            let charIndex = 0;
+            let isErasing = false;
+
+            function typeEffect() {
+                const currentText = texts[index];
+                if (!isErasing) {
+                    textElement.textContent = currentText.substring(0, charIndex + 1);
+                    charIndex++;
+                    if (charIndex === currentText.length) {
+                        isErasing = true;
+                        setTimeout(typeEffect, 2000);
+                    } else {
+                        setTimeout(typeEffect, 100);
+                    }
+                } else {
+                    textElement.textContent = currentText.substring(0, charIndex - 1);
+                    charIndex--;
+                    if (charIndex === 0) {
+                        isErasing = false;
+                        index = (index + 1) % texts.length;
+                        setTimeout(typeEffect, 500);
+                    } else {
+                        setTimeout(typeEffect, 50);
+                    }
+                }
+            }
+            typeEffect();
+        });
+    </script>
+</head>
+<body>
+    <div class="section intro">
+        <h1>Hello, I'm Venecia Gomez</h1>
+        <p class="typing-container">Aspiring <span class="typing-text"></span></p>
+    </div>
+    
+    <div class="section about">
+        <h2>About Me</h2>
+    
+        <p>I am an Information Science and Data Analytics student developing expertise in data analysis, visualization, and business intelligence. With hands-on experience in corporate environments, I apply analytical thinking to solve complex problems and drive data-driven decisions.</p>
+    </div>
+    
+    <div class="section portfolio">
+        <h2>My Portfolio</h2>
+        <div class="project">
+            <h3>Airbnb Data Analysis with Tableau</h3>
+            <p>Conducted market analysis on Airbnb listings, identifying pricing trends and occupancy patterns in 10+ cities.</p>
+        </div>
+        <div class="project">
+            <h3>Healthcare Analytics & Sales Operations</h3>
+            <p>Led data analysis on clinical application systems, optimizing data workflows and sales operations.</p>
+        </div>
+    </div>
+    
+    <div class="section resume">
+        <h2>Resume</h2>
+        <div class="resume-section">
+            <div>
+                <h3>Education</h3>
+                <p>Bachelor of Science, Information Science and Data Analytics</p>
+                <p>San Jose State University, San Jose, CA</p>
+                <h3>Skills</h3>
+                <p>CRM (Salesforce, Microsoft Dynamics), Data Cleaning, Python, Tableau, SQL, Excel, Workflow Improvement</p>
+            </div>
+            <div>
+                <h3>Professional Experience</h3>
+                <p><strong>Customer Service Associate - Voya Financial (2025)</strong></p>
+                <ul>
+                    <li>Provided customer support for retirement plans and 401(k) inquiries.</li>
+                    <li>Resolved customer issues efficiently by analyzing financial data.</li>
+                </ul>
+                <p><strong>Process Executive - Cognizant (2021 - 2024)</strong></p>
+                <ul>
+                    <li>Managed customer orders, processing 50+ orders daily with 98% accuracy.</li>
+                    <li>Resolved 20+ service-related complaints weekly, maintaining a 90% satisfaction rate.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="section contact">
+        <h2>Contact Me</h2>
+        <p>Email: Veneciagomez1123@gmail.com</p>
+        <p>GitHub: <a href="https://github.com/veneciagomez" style="color:white;">github.com/veneciagomez</a></p>
+    </div>
+</body>
+</html>
